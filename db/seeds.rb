@@ -8,3 +8,4 @@
 
 Composer.create!(username: "Tupac", email: "email6@email.com", password_digest: "password")
 Repertoire.create!(title: "Rock")
+Composer.create!(username: "Jonald_Jonaldson", email: "jonaldj@email.com", password: "password")
