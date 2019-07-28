@@ -6,6 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Composer.create!(username: "Tupac", email: "email6@email.com", password_digest: "password")
-Repertoire.create!(title: "Rock")
-Composer.create!(username: "Jonald_Jonaldson", email: "jonaldj@email.com", password: "password")
+
+Composer.create!(username: "Tom Petty", email: "t.petty@email.com", password_digest: "password")
+Composer.create!(username: "Honey Dijon", email: "h.dijon@email.com", password_digest: "password")
+Composer.create!(username: "Jack White", email: "j.white@email.com", password_digest: "password")
+
+
+Repertoire.create!(title: "Rock", composer_id: "1")
+Repertoire.create!(title: "Metal", composer_id: "1")
+Repertoire.create!(title: "House", composer_id: "2")
+Repertoire.create!(title: "Rock", composer_id: "3")
+Upbeat.create!(title: "Fantasy", composer_id: "1", repertoire_id: "1")
+Upbeat.create!(title: "Fantasy", composer_id: "2", repertoire_id: "2")
+Upbeat.create!(title: "Fantasy", composer_id: "2", repertoire_id: "1")
+Upbeat.create!(title: "Fantasy", composer_id: "1", repertoire_id: "2")
+Upbeat.create!(title: "Block Rockin' Beats", composer_id: "3", repertoire_id: "2")
+
+
