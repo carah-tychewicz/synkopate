@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_28_214728) do
+ActiveRecord::Schema.define(version: 2019_07_31_230110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_07_28_214728) do
     t.integer "composer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "genre"
   end
 
   create_table "upbeats", force: :cascade do |t|
@@ -36,6 +37,10 @@ ActiveRecord::Schema.define(version: 2019_07_28_214728) do
     t.integer "repertoire_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "artist"
+    t.string "album"
+    t.string "genre"
+    t.string "duration"
   end
 
 end
