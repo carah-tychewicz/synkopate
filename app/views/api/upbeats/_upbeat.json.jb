@@ -1,5 +1,8 @@
 {
   id: upbeat.id,
   title: upbeat.title,
-  
+  artist: upbeat.artist,
+  album: upbeat.album,
+  genre: upbeat.genre,
+  duration: upbeat.duration,
 }

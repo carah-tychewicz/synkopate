@@ -1,3 +1,6 @@
-{
-  message: @upbeats
-}
+@upbeats.map do |upbeat|
+  render partial: "upbeat.json.jb", locals: { 
+    upbeat: upbeat,
+  }
+end
+
