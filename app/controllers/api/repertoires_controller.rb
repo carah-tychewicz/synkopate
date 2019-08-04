@@ -9,6 +9,7 @@ class Api::RepertoiresController < ApplicationController
     @create_repertoire = Repertoire.new(
     title: params[:title],
     genre: params[:genre],
+    composer_id: current_composer
   )
     if @create_repertoire.save
       render json: {message: 'Repertoire created successfully'}, status: :created
