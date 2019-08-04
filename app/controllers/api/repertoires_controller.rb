@@ -1,7 +1,9 @@
 class Api::RepertoiresController < ApplicationController
+  before_action :authenticate_composer
 
   def index
-    @repertoires = Repertoire.all
+    # @repertoires = Repertoire.all
+    @repertoires = current_composer.repertoires
     render "index.json.jb"
   end
 
@@ -9,7 +11,7 @@ class Api::RepertoiresController < ApplicationController
     @create_repertoire = Repertoire.new(
     title: params[:title],
     genre: params[:genre],
-    composer_id: current_composer
+    composer_id: current_composer.id
   )
     if @create_repertoire.save
       render json: {message: 'Repertoire created successfully'}, status: :created
