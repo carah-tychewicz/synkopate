@@ -1,0 +1,5 @@
+{
+  id: composer.id,
+  username: composer.username,
+  email: composer.email
+}

@@ -6,17 +6,23 @@ class Api::ComposersController < ApplicationController
   end
 
   def create
-    composer = Composer.new(
+    @create_composer = Composer.new(
     username: params[:username],
     email: params[:email],
     password: params[:password],
     password_confirmation: params[:password_confirmation]
   )
-    if composer.save
+    if @create_composer.save
       render json: {message: 'Composer created successfully'}, status: :created
     else
       render json: {errors: composer.errors.full_messages}, status: :bad_request
     end
+  end
+
+  def show
+    composer_id = params["id"]
+    @composer = Composer.find_by(id: composer_id)
+    render "show.json.jb"
   end
 
 

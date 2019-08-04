@@ -1,0 +1,3 @@
+render partial: "repertoire.json.jb", locals: { 
+  repertoire: @repertoire,
+ }

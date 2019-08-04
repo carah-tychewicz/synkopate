@@ -17,4 +17,12 @@ class Api::SessionsController < ApplicationController
     end
   end
 
+  helper_method :current_composer
+
+  def authenticate_composer
+    unless current_composer
+      render json: {}, status: :unauthorized
+    end
+  end
+
 end

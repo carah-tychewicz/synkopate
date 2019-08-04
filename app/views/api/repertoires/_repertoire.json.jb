@@ -1,0 +1,6 @@
+{
+  id: repertoire.id,
+  title: repertoire.title,
+  genre: repertoire.genre,
+  composer_id: repertoire.composer_id
+}

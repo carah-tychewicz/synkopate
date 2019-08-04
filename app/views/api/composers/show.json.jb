@@ -1,0 +1,3 @@
+render partial: "composer.json.jb", locals: { 
+  composer: @composer,
+ }
