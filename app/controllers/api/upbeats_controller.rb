@@ -1,6 +1,8 @@
 class Api::UpbeatsController < ApplicationController
   def index
-    @upbeats = Upbeat.all
+    # @upbeats = Upbeat.all
+    # @upbeats = Upbeat.where(composer_id: current_composer.id)
+    @upbeats = current_composer.upbeats
     render "index.json.jb"
   end
 

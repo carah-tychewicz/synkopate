@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Composer.create!(username: "Tom Petty", email: "t.petty@email.com", password_digest: "password")
-Composer.create!(username: "Honey Dijon", email: "h.dijon@email.com", password_digest: "password")
-Composer.create!(username: "Jack White", email: "j.white@email.com", password_digest: "password")
+Composer.create!(username: "Tom Petty", email: "t.petty@email.com", password: "password")
+Composer.create!(username: "Honey Dijon", email: "h.dijon@email.com", password: "password")
+Composer.create!(username: "Jack White", email: "j.white@email.com", password: "password")
 
 
 Repertoire.create!(title: "Rock", composer_id: "1")
