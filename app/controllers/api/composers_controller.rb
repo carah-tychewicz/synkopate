@@ -25,6 +25,10 @@ class Api::ComposersController < ApplicationController
     render "show.json.jb"
   end
 
+  # def current_composer
+  #   @current_composer = Composer.id
+  # end
+
 
 
 end

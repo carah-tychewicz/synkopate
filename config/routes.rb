@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     post "/composers" => "composers#create"
     post "/sessions" => "sessions#create"
     post "/repertoires" => "repertoires#create"
+    post "/upbeats" => "upbeats#create"
   end
 end
