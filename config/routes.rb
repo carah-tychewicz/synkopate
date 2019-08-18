@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     get "/repertoires/:id" => "repertoires#show"
     post "/composers" => "composers#create"
     post "/sessions" => "sessions#create"
-    post "/upbeats" => "upbeats#create"
     post "/repertoires" => "repertoires#create"
   end
 end
