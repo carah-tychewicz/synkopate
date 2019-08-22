@@ -12,6 +12,7 @@ class Api::UpbeatsController < ApplicationController
       album: params["album"],
       duration: params["duration"],
       genre: params["genre"],
+      url: params["url"],
       composer_id: current_composer.id
     )
     if @create_upbeat.save
@@ -22,7 +23,7 @@ class Api::UpbeatsController < ApplicationController
 
   def show
     upbeat_id = params["id"]
-    @upbeats = Upbeat.find_by(id: upbeat_id)
+    @upbeat = Upbeat.find_by(id: upbeat_id)
     render "show.json.jb"
   end
 end
