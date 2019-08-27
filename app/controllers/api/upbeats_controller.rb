@@ -3,6 +3,9 @@ class Api::UpbeatsController < ApplicationController
     # @upbeats = Upbeat.all
     # @upbeats = Upbeat.where(composer_id: current_composer.id)
     @upbeats = current_composer.upbeats
+    if params["all"]
+      @upbeats = Upbeat.all
+    end
     render "index.json.jb"
   end
 
@@ -26,4 +29,5 @@ class Api::UpbeatsController < ApplicationController
     @upbeat = Upbeat.find_by(id: upbeat_id)
     render "show.json.jb"
   end
+
 end

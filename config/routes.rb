@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     get "/upbeats" => "upbeats#index"
+    get "/upbeats?all=true" => "upbeats#index"
     get "/composers" => "composers#index"
     get "/repertoires" => "repertoires#index"
     get "/upbeats/:id" => "upbeats#show"
